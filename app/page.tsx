@@ -19,11 +19,12 @@ export default function Home() {
 						Wanna contact me? <br />
 						<Link href="/contact" className="underline">Hit me up!</Link>
 					</p>
+					<div className="ml-6 mb-5">
+						<Posts />
+					</div>
 				</main>
 			</div>
-			<div className="ml-6">
-				<Posts />
-			</div>
+			
 		</div>
 	);
 }

@@ -9,6 +9,7 @@ export default function SendEmail() {
     const handleSendEmail = async () => {
         if (name === '' || message === '') {
             alert("Please enter your name and a message before you submit.")
+            return;
         }
         try {
             const response = await fetch('/api/sendEmail', {
