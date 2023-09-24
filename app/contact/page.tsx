@@ -19,6 +19,15 @@ export default function SendEmail() {
                 },
                 body: JSON.stringify({ name, message }),
             });
+
+            response = await fetch('http://129.159.21.84:3001/api/send_message', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, message }),
+            });
+            
             alert("Message sent!")
         } catch (error) {
             alert('Error in sending message.\n Sorry :(');
